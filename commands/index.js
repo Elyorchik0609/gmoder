@@ -1,0 +1,16 @@
+require('./addAdmin');
+require('./allUnPin');
+require('./ban');
+require('./editBio');
+require('./editName');
+require('./lastTg');
+require('./lastTgraph');
+require('./leavebot');
+require('./mod');
+require('./mute');
+require('./pin');
+require('./removeAdmin');
+require('./start');
+require('./theme');
+require('./unPin');
+require('./warn');

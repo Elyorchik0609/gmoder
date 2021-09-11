@@ -1,0 +1,2 @@
+require('./leftChatMember');
+require('./newChatMember');
