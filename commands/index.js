@@ -1,3 +1,4 @@
+require('./2auth');
 require('./addAdmin');
 require('./allUnPin');
 require('./ban');
