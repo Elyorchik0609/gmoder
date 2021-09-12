@@ -7,7 +7,7 @@ const userIsMember = require('../middlewares/userIsMember');
 bot.hears('!warn', chatIsGroup, botIsAdmin, memberIsAdmin, userIsMember, ctx => {
   if (!ctx.message.reply_to_message) return ctx.reply('Reply bilan', { reply_to_message_id: ctx.message.message_id });
 
-  const msg = `Iltimos <a href="https://t.me/TGraph_Rules">guruh qoidalari</a> bilan yana bir bor tanishib chiqing\nKegingi safar ogohlantirishsiz jazo olasiz!`
+  const msg = `Iltimos <a href="https://t.me/TGraph_Rules">guruh qoidalari</a> bilan yana bir bor tanishib chiqing\nKeyingi safar ogohlantirishsiz jazo olasiz!`
   ctx.deleteMessage(ctx.message.message_id);
   ctx.replyWithHTML(msg, { reply_to_message_id: ctx.message.reply_to_message.message_id, disable_web_page_preview: true })
 })
