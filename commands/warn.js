@@ -4,7 +4,7 @@ const botIsAdmin = require('../middlewares/botIsAdmin');
 const chatIsGroup = require('../middlewares/chatIsGroup');
 const userIsMember = require('../middlewares/userIsMember');
 
-bot.command('warn', chatIsGroup, botIsAdmin, memberIsAdmin, userIsMember, ctx => {
+bot.hears('!warn', chatIsGroup, botIsAdmin, memberIsAdmin, userIsMember, ctx => {
   if (!ctx.message.reply_to_message) return ctx.reply('Reply bilan', { reply_to_message_id: ctx.message.message_id });
 
   const msg = `Iltimos <a href="https://t.me/TGraph_Rules">guruh qoidalari</a> bilan yana bir bor tanishib chiqing\nKegingi safar ogohlantirishsiz jazo olasiz!`

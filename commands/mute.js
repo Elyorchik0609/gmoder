@@ -5,7 +5,7 @@ const memberIsAdmin = require('../middlewares/memberIsAdmin');
 const botIsAdmin = require('../middlewares/botIsAdmin');
 const chatIsGroup = require('../middlewares/chatIsGroup');
 
-bot.command('mute', chatIsGroup, botIsAdmin, memberIsAdmin, replyIsAdmin, ctx => {
+bot.hears('!mute', chatIsGroup, botIsAdmin, memberIsAdmin, replyIsAdmin, ctx => {
   if (!ctx.message.reply_to_message) return ctx.reply('Reply bilan', { reply_to_message_id: ctx.message.message_id });
   const sabab = ctx.message.text.slice('/ban'.length + 1, ctx.message.text.length) || 'Qoida buzarlik!';
   const user_id = ctx.message.reply_to_message.from.id;

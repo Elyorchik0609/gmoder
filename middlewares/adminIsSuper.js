@@ -1,5 +1,5 @@
 function adminIsSuper(ctx, next) {
-  if (!ctx.message.reply_to_message) return next();
+  // if (!ctx.message.reply_to_message) return next();
 
   ctx.getChatAdministrators()
     .then(d => {

@@ -4,7 +4,7 @@ const botIsAdmin = require('../middlewares/botIsAdmin');
 const chatIsGroup = require('../middlewares/chatIsGroup');
 const userIsMember = require('../middlewares/userIsMember');
 
-bot.command('theme', chatIsGroup, botIsAdmin, memberIsAdmin, userIsMember, ctx => {
+bot.hears('!theme', chatIsGroup, botIsAdmin, memberIsAdmin, userIsMember, ctx => {
   if (!ctx.message.reply_to_message) return ctx.reply('Reply bilan', { reply_to_message_id: ctx.message.message_id });
 
   const msg = `Guruhimiz mavzusi: Telegram(TG) va Telegraph(TGraph) Messenger'dan yiroq mavzularni ochmemiz.`;

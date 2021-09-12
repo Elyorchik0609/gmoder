@@ -1,11 +1,16 @@
 require('./addAdmin');
 require('./allUnPin');
 require('./ban');
+require('./delacc');
 require('./editBio');
 require('./editName');
+require('./gst');
+require('./hidchat');
+require('./hidmul');
 require('./lastTg');
 require('./lastTgraph');
 require('./leavebot');
+require('./lowadm');
 require('./mod');
 require('./mute');
 require('./pin');
